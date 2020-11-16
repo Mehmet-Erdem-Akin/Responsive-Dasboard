@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Pro 1</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+    <link rel="stylesheet" href="style/style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <script>
+        function menuAc() {
+
+            var genislik = window.screen.width;
+            var yukseklik = window.screen.height;
+            if (genislik <= 768) {
+
+                document.getElementById("sidebar").style.width = "300px";
+                document.getElementById("content").style.marginLeft = "0px";
+
+            } else if (genislik >= 768) {
+
+                document.getElementById("sidebar").style.width = "300px";
+                document.getElementById("content").style.marginLeft = "300px";
+                document.getElementById("content").style.width = "calc(100% - 300px )";
+
+            }
+        }
+
+        function menuKapat() {
+            document.getElementById("sidebar").style.width = "0";
+            document.getElementById("content").style.marginLeft = "0";
+            document.getElementById("content").style.width = "calc(100%)";
+
+        }
+    </script>
+
+    <main>
+        <div class="row mx-auto">
+
+            <div id="sidebar" class="">
+                <div class="overlay">a</div>
+                <button class="btn" onclick="menuKapat()"><span class="text-white"><i class="far fa-arrow-alt-circle-left"></i></span></button>
+
+                <div class="row py-5 justify-content-center mx-auto">
+                    <h1 class="text-white">Your Logo</h1>
+                </div>
+
+                <ul class="nav pl-3 flex-column">
+                    <h5>Pro Version</h5>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-unlock-alt"></i> Upgrade to PRO</a>
+                    </li>
+                </ul>
+
+                <ul class="nav pl-3 flex-column">
+                    <h5>Menu</h5>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-file"></i> Pages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-newspaper"></i> Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-puzzle-piece"></i> Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-users"></i> Users</a>
+                    </li>
+                </ul>
+
+                <ul class="nav pl-3 flex-column">
+                    <h5>Ui Components</h5>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fab fa-elementor"></i> Elements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-compress"></i> Components</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-table"></i> Regular Tables</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div id="content" class="">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="menuAc" onclick="menuAc()"><i class="fas fa-align-left"></i></a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+
+                    <div class="collapse  navbar-collapse" id="navbarNav">
+
+                        <ul class="navbar-nav ml-auto pr-5">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-bell"></i> </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#"><i class="fas fa-check"></i> Action</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-check"></i> Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-times"></i> Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-envelope"></i> </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#"><i class="fas fa-check"></i> Action</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-check"></i> Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-times"></i> Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-cogs"></i> </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#"><i class="fas fa-check"></i> Action</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-check"></i> Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-times"></i> Something else here</a>
+                                </div>
+                            </li>
+
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+                <hr>
+
+                <div class="content-in mx-3-xl-3">
+
+                    <div class="row mx-auto justify-content-center align-items-center">
+                        <div class="table col-11 col-sm-12 col-md-5 col-lg-5 col-xl-5  py-5 mx-3 my-3">
+                            <canvas id="ilk" width="auto" height="auto"></canvas>
+                            <script>
+                                let miktar = [92, 152];
+                                let markalar = ['Page 1', 'Page 2', ];
+
+                                let kanvas = document.getElementById('ilk');
+
+                                let grafik = new Chart(kanvas, {
+                                    type: 'pie',
+                                    data: {
+                                        labels: markalar,
+                                        datasets: [{
+                                            label: '2018Q3 Telefon Satışı',
+                                            data: miktar,
+                                            backgroundColor: [
+                                                "#6484F6",
+                                            ],
+                                            borderColor: [
+                                                "#6484F6",
+                                            ],
+                                            borderWidth: 1
+                                        }],
+
+                                    }
+                                });
+                            </script>
+                        </div>
+                        <div class=" table col-11 col-sm-12 col-md-5 col-lg-5 col-xl-5  align-items-center py-5 mx-3 my-3">
+                            <canvas id="iki" width="auto" height="auto"></canvas>
+
+                            <script>
+                                let miktar2 = [92, 152, 76, 135, 53];
+                                let markalar2 = ['Article 1', 'Article 2', 'Article 3', 'Article 4', 'Article 4'];
+
+                                let kanvas2 = document.getElementById('iki');
+
+                                let grafik2 = new Chart(kanvas2, {
+                                    type: 'bar',
+                                    data: {
+                                        labels: markalar2,
+                                        datasets: [{
+                                            label: 'Articles Views',
+                                            data: miktar2,
+                                            backgroundColor: [
+                                                "#6484F6",
+                                                "#DCDCE3",
+                                                "#6484F6",
+                                                "#DCDCE3",
+                                                "#6484F6",
+                                            ],
+                                            borderColor: [
+                                                "#DCDCE3",
+                                                "#6484F6",
+                                                "#DCDCE3",
+                                                "#6484F6",
+                                                "#DCDCE3",
+                                            ],
+                                            borderWidth: 1
+                                        }],
+
+                                    }
+                                });
+                            </script>
+                        </div>
+                        <div class="table col-11 col-sm-12 col-md-5 col-lg-5 col-xl-5 align-items-center py-5  mx-3 my-3">
+                            <canvas id="uc" width="auto" height="auto"></canvas>
+                            <script>
+                                let miktar3 = [92, 152, 76, 135, 53];
+                                let markalar3 = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'MAyıs'];
+
+                                let kanvas3 = document.getElementById('uc');
+
+                                let grafik3 = new Chart(kanvas3, {
+                                    type: 'line',
+                                    data: {
+                                        labels: markalar3,
+                                        datasets: [{
+                                            label: 'Category Views',
+                                            data: miktar3,
+                                            backgroundColor: [
+                                                "#6484F6",
+                                            ],
+                                            borderColor: [
+                                                "#fff",
+                                            ],
+                                            borderWidth: 1
+                                        }],
+
+                                    }
+                                });
+                            </script>
+                        </div>
+                        <div class="table col-11 col-sm-12 col-md-5 col-lg-5 col-xl-5 align-items-center py-5 mx-3 my-3">
+                            <canvas id="dort" width="auto" height="auto"></canvas>
+                            <script>
+                                let miktar4 = [92, 152, 76, 135, 53];
+                                let markalar4 = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs'];
+
+                                let kanvas4 = document.getElementById('dort');
+
+                                let grafik4 = new Chart(kanvas4, {
+                                    type: 'doughnut',
+                                    data: {
+                                        labels: markalar4,
+                                        datasets: [{
+                                            label: 'Number of users',
+                                            data: miktar4,
+                                            backgroundColor: [
+                                                "#6484F6",
+                                                "#DCDCE3",
+                                                "#2834EF",
+                                                "#DCDEFF",
+                                                "#AEB3FC ",
+                                            ],
+                                            borderColor: [
+                                                "#DCDCE3",
+                                                "#6484F6",
+                                                "#2834EF",
+                                                "#DCDEFF",
+                                                "#AEB3FC ",
+                                            ],
+                                            borderWidth: 1
+                                        }],
+
+                                    }
+                                });
+                            </script>
+                        </div>
+                        <div class="table col-11 col-sm-11 col-md-11 col-lg-10 col-xl-10 align-items-center py-5 mx-5 my-3">
+                            <canvas id="bes" width="auto" height="auto"></canvas>
+                            <script>
+                                let miktar5 = [92, 152, 76, 135, 53];
+                                let markalar5 = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs'];
+
+                                let kanvas5 = document.getElementById('bes');
+
+                                let grafik5 = new Chart(kanvas5, {
+                                    type: 'polarArea',
+                                    data: {
+                                        labels: markalar5,
+                                        datasets: [{
+                                            label: 'Total Views',
+                                            data: miktar5,
+                                            backgroundColor: [
+                                                "#6484F6",
+                                                "#DCDCE3",
+                                                "#2834EF",
+                                                "#DCDEFF",
+                                                "#AEB3FC ",
+                                            ],
+                                            borderColor: [
+                                                "#DCDCE3",
+                                                "#6484F6",
+                                                "#2834EF",
+                                                "#DCDEFF",
+                                                "#AEB3FC ",
+                                            ],
+                                            borderWidth: 1
+                                        }],
+
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
