@@ -3,14 +3,9 @@
   margin: 0;
   padding: 0; }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   main #sidebar {
-    overflow-y: scroll !important; }
-    main #sidebar ul {
-      font-size: 14px !important; }
-    main #sidebar .overlay {
-      height: 120% !important;
-      opacity: 0 !important; } }
+    overflow-y: scroll !important; } }
 main {
   height: auto;
   width: auto; }
@@ -24,7 +19,6 @@ main {
     background-color: #6484F6;
     padding-left: -150px !important;
     overflow: hidden;
-    overflow-y: scroll !important;
     transition: 0.6s;
     -webkit-box-shadow: 3px 3px 14px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 3px 3px 14px 0px rgba(0, 0, 0, 0.75);
@@ -33,11 +27,11 @@ main {
       z-index: -1;
       position: absolute;
       height: 100%;
-      width: 100%;
+      width: 100vw;
       background-image: url("https://images.pexels.com/photos/258196/pexels-photo-258196.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") !important;
-      background-size: cover;
+      background-size: contain;
       background-position: center;
-      opacity: 0.1; }
+      opacity: 0.2; }
     main #sidebar .btn {
       position: absolute;
       top: 0;
@@ -71,12 +65,8 @@ main {
       -moz-box-shadow: 0px 0px 11px 0px #6484f6;
       box-shadow: 0px 0px 11px 0px #6484f6;
       background-color: #F5F5FD !important; }
-      main #content .content-in .table h4 {
-        color: #6484F6; }
-      main #content .content-in .table .price {
-        font-size: 30px; }
-        main #content .content-in .table .price .dolar {
-          color: green; }
+      main #content .content-in .table #uc {
+        background-color: #F5F5FD; }
     main #content nav {
       background-color: #F5F5FD !important; }
       main #content nav .dropdown-menu i {
