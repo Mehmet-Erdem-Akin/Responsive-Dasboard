@@ -1,3 +1,3 @@
 # Admin-Dasboard
-using Html , Css , Bootstrap , chart js
+It was created with a Html , Css , Bootstrap , Chart Js.
 
